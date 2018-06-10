@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7BD808B-1503-4133-8995-98A1A94A4307}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LTA_PGS_20</RootNamespace>
+    <AssemblyName>LTA_PGS_20</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ManifestCertificateThumbprint>A47A5FF89C0388F519F5EC458E4A6C8C23230622</ManifestCertificateThumbprint>
+    <ManifestKeyFile>LTA_PGS_20_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.3.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\Debug\LTA_PGS_20.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>test.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyWsitMsg, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboTreeView.Designer.cs">
+      <DependentUpon>ComboTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Control.cs" />
+    <Compile Include="fn_global.cs" />
+    <Compile Include="Form_3Pages_Diplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_3Pages_Diplay.Designer.cs">
+      <DependentUpon>Form_3Pages_Diplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Adhoc_condig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Adhoc_condig.Designer.cs">
+      <DependentUpon>Form_Adhoc_condig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_alarm.Designer.cs">
+      <DependentUpon>Form_alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_contact.Designer.cs">
+      <DependentUpon>Form_contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_debug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_debug.Designer.cs">
+      <DependentUpon>Form_debug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Dimming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Dimming.Designer.cs">
+      <DependentUpon>Form_Dimming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_new_schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_new_schedule.Designer.cs">
+      <DependentUpon>Form_new_schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_priview_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_priview_new.Designer.cs">
+      <DependentUpon>Form_priview_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_schedule.Designer.cs">
+      <DependentUpon>Form_schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Status.Designer.cs">
+      <DependentUpon>Form_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Time_Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Time_Config.Designer.cs">
+      <DependentUpon>Form_Time_Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VMSCMS_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VMSCMS_set.Designer.cs">
+      <DependentUpon>Form_VMSCMS_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTP.cs" />
+    <Compile Include="f_paintbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="f_paintbox.designer.cs">
+      <DependentUpon>f_paintbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="http.cs" />
+    <Compile Include="MyFile.cs" />
+    <Compile Include="Form_Change_PWD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Change_PWD.Designer.cs">
+      <DependentUpon>Form_Change_PWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Config_CMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Config_CMS.Designer.cs">
+      <DependentUpon>Form_Config_CMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Loginout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Loginout.Designer.cs">
+      <DependentUpon>Form_Loginout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_main.Designer.cs">
+      <DependentUpon>Form_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Management.Designer.cs">
+      <DependentUpon>Form_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_New_VMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_New_VMS.Designer.cs">
+      <DependentUpon>Form_New_VMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Priview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Priview.Designer.cs">
+      <DependentUpon>Form_Priview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reports.Designer.cs">
+      <DependentUpon>Form_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VMS_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VMS_detail.Designer.cs">
+      <DependentUpon>Form_VMS_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inc.cs" />
+    <Compile Include="PrintDataGrid.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboTreeView.resx">
+      <DependentUpon>ComboTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_3Pages_Diplay.resx">
+      <DependentUpon>Form_3Pages_Diplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Adhoc_condig.resx">
+      <DependentUpon>Form_Adhoc_condig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_alarm.resx">
+      <DependentUpon>Form_alarm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Change_PWD.resx">
+      <DependentUpon>Form_Change_PWD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Config_CMS.resx">
+      <DependentUpon>Form_Config_CMS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_contact.resx">
+      <DependentUpon>Form_contact.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_debug.resx">
+      <DependentUpon>Form_debug.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Dimming.resx">
+      <DependentUpon>Form_Dimming.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Loginout.resx">
+      <DependentUpon>Form_Loginout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_main.resx">
+      <DependentUpon>Form_main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Management.resx">
+      <DependentUpon>Form_Management.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_new_schedule.resx">
+      <DependentUpon>Form_new_schedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_New_VMS.resx">
+      <DependentUpon>Form_New_VMS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Priview.resx">
+      <DependentUpon>Form_Priview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_priview_new.resx">
+      <DependentUpon>Form_priview_new.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Reports.resx">
+      <DependentUpon>Form_Reports.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_schedule.resx">
+      <DependentUpon>Form_schedule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Status.resx">
+      <DependentUpon>Form_Status.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Time_Config.resx">
+      <DependentUpon>Form_Time_Config.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VMSCMS_set.resx">
+      <DependentUpon>Form_VMSCMS_set.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VMS_detail.resx">
+      <DependentUpon>Form_VMS_detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_paintbox.resx">
+      <DependentUpon>f_paintbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rows_Data.resx">
+      <DependentUpon>Rows_Data.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RemoteFile.cs" />
+    <Compile Include="Rows_Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rows_Data.Designer.cs">
+      <DependentUpon>Rows_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCPClient.cs" />
+    <Compile Include="Tools.cs" />
+    <None Include="test.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
